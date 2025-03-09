@@ -3,6 +3,10 @@ package com.carlotaml21;
 public class DnaToRnaConverter {
 
     public String transcribe(String dna){
+        if (dna == null || dna.isEmpty()) {
+            return "";
+        }
+
         StringBuilder rna = new StringBuilder();
         for (char nucleotide : dna.toCharArray()) {
             switch (nucleotide) {
