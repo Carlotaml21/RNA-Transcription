@@ -34,4 +34,9 @@ public class DnaToRnaConverterTest {
         assertEquals("Invalid DNA nucleotide: B", exception.getMessage());
     }
 
+    @Test
+    void testUpperCase(){
+        assertEquals("U", converter.transcribe("a"));
+    }
+
 }
