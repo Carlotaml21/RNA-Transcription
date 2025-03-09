@@ -21,4 +21,9 @@ public class DnaToRnaConverterTest {
         assertEquals("GCGC", converter.transcribe("CGCG"));
     }
 
+    @Test
+    void testEmptyString() {
+        assertEquals("", converter.transcribe(""));
+    }
+
 }
