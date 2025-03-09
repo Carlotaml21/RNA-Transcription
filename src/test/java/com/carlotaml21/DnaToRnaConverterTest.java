@@ -26,4 +26,12 @@ public class DnaToRnaConverterTest {
         assertEquals("", converter.transcribe(""));
     }
 
+    @Test
+    void testInvalidCharacters() {
+        Exception exception = assertThrows(IllegalArgumentException.class, () -> {
+            converter.transcribe("BXGCT");
+        });
+        assertEquals("Invalid DNA nucleotide: B", exception.getMessage());
+    }
+
 }
