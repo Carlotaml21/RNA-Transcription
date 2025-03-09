@@ -15,4 +15,10 @@ public class DnaToRnaConverterTest {
         assertEquals("U", converter.transcribe("A"));
     }
 
+    @Test
+    void testTranscribeFullSequence() {
+        assertEquals("UGCACCAGAAUU", converter.transcribe("ACGTGGTCTTAA"));
+        assertEquals("GCGC", converter.transcribe("CGCG"));
     }
+
+}
