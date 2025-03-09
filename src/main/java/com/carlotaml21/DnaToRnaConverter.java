@@ -8,7 +8,7 @@ public class DnaToRnaConverter {
         }
 
         StringBuilder rna = new StringBuilder();
-        for (char nucleotide : dna.toCharArray()) {
+        for (char nucleotide : dna.toUpperCase().toCharArray()) {
             switch (nucleotide) {
                 case 'G': rna.append('C'); break;
                 case 'C': rna.append('G'); break;
